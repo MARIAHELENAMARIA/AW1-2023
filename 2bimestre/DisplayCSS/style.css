@@ -1,0 +1,46 @@
+.exBloco{
+    display: flex;
+    background-color: red;
+    text-align: center;
+}
+
+.exLinha{
+    display: inline;
+    border: 1px solid blue;
+    color: blue;
+    padding: 10px;
+}
+
+.botao{
+    display: inline-block;
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+
+.q1{
+    display: flex;
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+.i1{
+    display: inline-flex;
+    background-color: blue;
+    border: 10px;
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.i2{
+    display: inline-flex;
+    background-color: blue;
+    border: 10px;
+    flex: 2;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
