@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        background-color: #000000;
+        color: white;
+        width: 20%;
+        height: 800px;
+    }
+
+    #menuHorizontal{
+        list-style: none;
+        padding: 0;
+        z-index: 1000;
+    }
+    
+    #menuHorizontal li{
+        display: inline;
+    }
+    
+    #menuHorizontal li a {
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+        transition: background .4s;
+    }
+    
+    #menuHorizontal li a:hover {
+        background-color: white;
+        color: rgb(41, 41, 41);
+    }
+
+    .menu-lines{
+        position:absolute;
+        z-index: 999;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .menu-lines span{
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: white;
+        border-radius: 3px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    
+    nav{
+        background-color: rgb(41, 41, 41);
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #menuHorizontal{
+        list-style: none;
+        padding: 0;
+    }
+    
+    #menuHorizontal li{
+        display: inline;
+    }
+    
+    #menuHorizontal li a {
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+        transition: background .4s;
+    }
+    
+    #menuHorizontal li a:hover {
+        background-color: white;
+        color: rgb(41, 41, 41);
+    }
+}

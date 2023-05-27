@@ -1,0 +1,65 @@
+*{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    margin: 0;
+}
+
+header{
+    background-color: rgb(41, 41, 41);
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menuHorizontal{
+    list-style: none;
+    padding: 0;
+}
+
+#menuHorizontal li{
+    display: inline;
+}
+
+#menuHorizontal li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    transition: background .4s;
+}
+
+#menuHorizontal li a:hover {
+    background-color: white;
+    color: rgb(41, 41, 41);
+}
+
+i#burguer{
+    display: block;
+    text-align: center;
+    color: rgb(41, 41, 41);
+}
+
+i#burguer:hover{
+    background-color: white;
+    color: rgb(41, 41, 41);
+    transition: background .4s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    i#burguer{
+        display: block;
+        text-align: center;
+        color: white;
+    }
+    
+    i#burguer:hover{
+        background-color: white;
+        color: rgb(41, 41, 41);
+        transition: background .4s;
+        cursor: pointer;
+    }
+}
+
+/*<i class="fa-solid fa-bars"></i>*/
