@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+body {
+    font-family: "Comfortaa", cursive;
+    margin: 0;
+    background-color: rgb(255, 193, 0);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    top: 1vh;
+    left: 1vw;
+    width: 98vw;
+    height: 98vh;
+    background: #414142;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.tela-esquerda > h1 {
+    font-size: 2vw;
+    color:rgb(255, 193, 0);
+}
+
+.tela-esquerda {
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card > h1 {
+    font-size: 2vw;
+    color:black;
+}
+
+.tela-direita {
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: rgb(255, 193, 0);
+    color: #414142;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgb(255, 193, 0);
+    }
+            
+.imagem {
+    width: 35vw;
+}
+
+.titulo{
+    text-align: center;
+}
+
+input{
+    border-radius: 10px;
+    width: 200px;
+}
+
+button{
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #414142;
+    border: 3px solid black;
+    color:rgb(255, 193, 0);
+    font-size: 30px;
+}
