@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    background-color: #30670120;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #30670180;
+    color: #306701;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes move-css {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(300px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+/*colocar icone 3x*/
+.css{
+    align-items: flex-start;
+    animation: move-css 3s infinite;
+}
+.nome{
+    align-items: center;
+}
+
+.github{
+    align-items: flex-end;
+}
+
+/*colocair itens centralizado*/
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10vw;
+    align-items: center;
+}
+  
+.item {
+    display: flex;
+    border: 3px solid #306701;
+    border-radius: 20px;
+}
+
+.bicho{
+    width: 15vh;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bicho:active {
+    transform: translate(35vw, 150px) scale(3); /* Define a posição e o tamanho da imagem no hover */
+}
+
+.eu{
+    text-align: justify;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea, select{
+    border: 1px solid #306701;
+    background-color: #30670120;
+    border-radius: 10px ;
+    opacity: 0.5;
+    padding: 10px;
+    margin: 10px;
+}
+
+input:hover, textarea:hover{
+    opacity: 1;
+    background-color: white;
+}
+
+.botao{
+    border-radius: 10px;
+    border: 1px solid #306701;
+    padding: 10px;
+    background-color: #30670180;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+
+th{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #306701;
+    background-color: #30670120;
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+.vermelho{
+    color: red;
+}
+
+.azul{
+    color: blue;
+}
+
+.amarelo{
+    color: yellow;
+}
