@@ -1,0 +1,49 @@
+-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var nome = "Maria Helena";
+        var idade = 19;
+
+        alert("Seu nome é: " + nome + "\nSua idade é: " + idade);
+        
+        var num1 = prompt("Digite um número: ");
+        var num2 = prompt("Digite outro número: ");
+
+        var soma = num1 + num2;
+
+        alert("A soma é: " + soma);
+
+        alert(typeof num1);
+        alert(typeof num2);
+        alert(typeof soma);
+
+        var num3 = Number.parseInt(prompt("Digite um número: "));
+        var num4 = Number.parseInt(prompt("Digite outro número: "));
+
+        var soma2 = num3 + num4;
+
+        alert("A soma é: " + soma2);
+
+        alert(typeof num3);
+        alert(typeof num4);
+        alert(typeof soma2);
+
+        document.write("Seu nome é: " + nome);
+        document.write("<br>Seu nome caixa alta: " + nome.toUpperCase());
+        document.write("<br>Seu nome minúsculo: " + nome.toLowerCase());
+        document.write("<br>Seu nome tem " + nome.length + " letras.");
+
+        document.write("<br>Seu nome é: " + nome);
+        document.write(`<br>Seu nome é: ${nome}`);
+
+    </script>
+</body>
+</html>
