@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p></p>
+
+        <script>
+            var nome = prompt("Digite seu nome: ");
+            var idade = Number.parseInt(prompt("Digite sua idade: "));
+
+            const p = document.getElementsByTagName("p")[0];
+
+            p.style.textAlign = "center";
+            p.style.color = "pink";
+            p.style.fontSize = "50px";
+
+            p.innerText = `Seu nome é ${nome} e você tem ${idade} anos.`;
+            //p.textContent = 'Seu nome é ${nome} e você tem ${idade} anos.';
+
+        </script>
+    </body>
+</html>
