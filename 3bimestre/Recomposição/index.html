@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade de Recomposição</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .q1{
+                display: grid;
+                grid-template-columns: repeat(3, 50px);
+                grid-template-rows: repeat(3, 100px);
+                gap: 10px;
+            }
+            
+            .q2{
+                display: inline-block;
+                padding: 20px;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td class="cor">Nome: </td>
+                    <td class="cor">Idade: </td>
+                </tr>
+                <tr>
+                    <td class="nome"></td>
+                    <td class="idade"></td>
+                </tr>
+                <tr>
+                    <td class="anoCabecalho cor" colspan="2" id="1"></td>
+                </tr>
+                <tr>
+                    <td class="ano" colspan=""></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <th class="cor">Disciplina</th>
+                <th class="cor">Nota</th>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Português</td>
+                    <td class="pt"></td>
+                </tr>
+                <tr>
+                    <td>Matemática</td>
+                    <td class="mat"></td>
+                </tr>
+                <tr><td>Desenvolvimento WEB</td>
+                    <td class="web"></td>
+                </tr>
+                <tr>
+                    <td>Média Total</td>
+                    <td class="media"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="q1">
+            <div class="q2" id="1"></div>
+            <div class="q2" id="2"></div>
+            <div class="q2" id="3"></div>
+
+            <div class="q2" id="4"></div>
+            <div class="q2" id="5"></div>
+            <div class="q2" id="6"></div>
+
+            <div class="q2" id="7"></div>
+            <div class="q2" id="8"></div>
+            <div class="q2" id="9"></div>
+        </div>
+
+        <script>
+            var nome = prompt("Nome: ");
+            var idade = Number.parseInt(prompt("Idade: "));
+
+            var pt = Number.parseFloat(prompt("Nota de Português: "));
+            var mat = Number.parseFloat(prompt("Nota de Matemática: "));
+            var web = Number.parseFloat(prompt("Nota de Desenvolvimento WEB: "));
+
+            var ano = Number.parseInt(prompt("Digite um ano do futuro: "));
+            var cor = prompt("Uma Cor em Inglês: ");
+
+            class Aluno{
+                constructor(nome, idade, pt, mat, web){
+                    this.nome = nome;
+                    this.idade = idade;
+
+                    this.pt = pt;
+                    this.mat = mat;
+                    this.web = web;
+
+                    this.ano = ano;
+                }
+
+                calculaMedia(){
+                    return (this.pt + this.mat + this.web)/3;
+                }
+
+                calcularAno(){
+                    const anoAtual = new Date;
+                    const anoNasc = anoAtual.getFullYear() - this.idade;
+
+                    return this.ano - anoNasc;
+                }
+            }
+
+            const a1 = new Aluno(nome, idade, pt, mat, web);
+
+            document.querySelector(".nome").textContent = a1.nome;
+            document.querySelector(".idade").textContent = a1.idade;
+            document.querySelector(".anoCabecalho").textContent = `Em ${ano} você terá: `;
+            document.querySelector(".ano").textContent = a1.calcularAno();
+
+            document.querySelector(".pt").textContent = a1.pt;
+            document.querySelector(".mat").textContent = a1.mat;
+            document.querySelector(".web").textContent = a1.web;
+            document.querySelector(".media").textContent = a1.calculaMedia();
+
+            const elementoscor = document.querySelectorAll(".cor");
+            
+            elementoscor.forEach((element) => {
+                element.style.backgroundColor = cor;
+            });
+
+            var entrada = prompt("Digite 9 numeros separados por espaços:");
+            var numeros = entrada.split(" ");
+
+            for (var i = 1; i <= 9; i++) {
+                var elementoId = i + 1;
+                document.getElementById(elementoId.toString()).textContent = numeros[i];
+            }
+
+        </script>
+    </body>
+</html>
