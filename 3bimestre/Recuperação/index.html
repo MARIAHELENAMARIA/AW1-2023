@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Julio e maria helena rec</h1>
+        </header>
+        <main>
+            <div class="caixa">
+                <h1>To Do List</h1>
+                <div class="caixa2" id="caixa2">
+                    <p class="concluido" onclick=testeClasse()>Tarefa 1</p>
+                    <p class="naoFeito" onclick=testeClasse()>Tarefa 2 </p>
+                    <p class="aFazer" onclick=testeClasse()>Tarefa 3</p>
+                </div>
+                <form method="get">
+                    <input type="text" placeholder="adicionar atividade" id="tarefa" name="tarefa">
+                    <button type="submit">adicionar</button>
+                </form>
+                <div>
+                    <h2 class="msg">Todas as tarefas foram concluidas.</h2>
+                </div>
+            </div>    
+        </main>
+        <footer>
+
+        </footer>
+
+
+        <script>
+            var form = document.getElementsByTagName('form')[0];
+            var campo = document.getElementById('tarefa');
+
+            form.addEventListener('submit', function(e) {
+                // alerta o valor do campo
+                console.log(campo.value);
+                
+                document.getElementById("caixa2").innerHTML += `<p class="aFazer" onclick=testeClasse()>${campo.value}</p>`;
+                // impede o envio do form
+                e.preventDefault();
+            });
+
+            function testeClasse(){
+                let classe = this;
+
+                console.log(classe);
+                 
+                /*if(classe == "concluido"){
+                    muda pra vermelho
+                }
+                else if(cinza){
+                    muda pra verde
+                }
+                else if(vermelho){
+                    muda pra cinza
+                }*/
+            }
+        </script>
+    </body>
+</html>
